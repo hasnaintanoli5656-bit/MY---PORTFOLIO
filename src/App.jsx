@@ -344,7 +344,7 @@ export default function App() {
         {/* HERO */}
         <section
           id="home"
-          className="mx-auto grid min-h-[90vh] max-w-7xl items-center gap-12 px-5 py-20 md:grid-cols-2 md:px-8"
+          className="mx-auto grid min-h-[90vh] max-w-7xl items-center gap-12 px-5 py-12 md:grid-cols-2 md:px-8"
         >
           <motion.div
             initial="hidden"
@@ -625,7 +625,7 @@ export default function App() {
         {/* PROJECTS */}
         <section
           id="projects"
-          className="border-y border-white/[0.07] bg-[#0e101a] py-28"
+          className="border-y border-white/[0.07] bg-[#0e101a] py-14"
         >
           <div className="mx-auto max-w-7xl px-5 md:px-8">
             <Heading
@@ -752,7 +752,7 @@ export default function App() {
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="mx-auto max-w-7xl px-5 py-28 md:px-8">
+        <section id="contact" className="mx-auto max-w-7xl px-5 py-14 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
