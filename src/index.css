@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-main: #111827;
+  --bg-section: #172235;
+  --bg-card: #243449;
+  --accent: #38bdf8;
+  --text-main: #f1f5f9;
+  --text-muted: #cbd5e1;
+}
+
+::selection {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+section[id] {
+  scroll-margin-top: 0;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #38bdf8, #818cf8, #67e8f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  outline-offset: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #38bdf8;
+}
+
+.project-card h3,
+.project-card p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+  .project-preview {
+    height: 230px;
+  }
+
+  .project-preview .group-hover\:opacity-100 {
+    opacity: 1;
+  }
+
+  .project-preview .group-hover\:translate-y-0 {
+    transform: translateY(0);
+  }
+}
+
