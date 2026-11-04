@@ -344,7 +344,7 @@ export default function App() {
         {/* HERO */}
         <section
           id="home"
-          className="mx-auto grid min-h-[90vh] max-w-7xl items-center gap-12 px-5 py-12 md:grid-cols-2 md:px-8"
+          className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 overflow-hidden px-4 py-16 sm:px-6 sm:py-20 md:grid-cols-2 md:gap-8 md:px-8 lg:gap-16 lg:py-24"
         >
           <motion.div
             initial="hidden"
@@ -466,12 +466,12 @@ export default function App() {
               className="absolute h-[300px] w-[300px] rounded-full bg-violet-600/30 blur-[90px] sm:h-[360px] sm:w-[360px]"
             />
 
-            <div className="relative rounded-full bg-gradient-to-br from-violet-400 via-blue-500 to-cyan-400 p-[5px] shadow-[0_0_80px_rgba(124,58,237,0.3)]">
+            <div className="relative mx-auto flex w-full min-w-0 max-w-[460px] items-center justify-center px-4 py-8 sm:py-10">
               <div className="overflow-hidden rounded-full border-[7px] border-[#10111c]">
                 <img
                   src="/hasnain-profile.jpeg"
                   alt="Hasnain Tanoli"
-                  className="h-[270px] w-[270px] rounded-full object-cover object-center sm:h-[340px] sm:w-[340px]"
+                  className="h-[220px] w-[220px] rounded-full object-cover object-center xs:h-[250px] xs:w-[250px] sm:h-[310px] sm:w-[310px] md:h-[280px] md:w-[280px] lg:h-[340px] lg:w-[340px]"
                 />
               </div>
             </div>
@@ -479,7 +479,7 @@ export default function App() {
             <motion.div
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
-              className="absolute -left-2 top-16 rounded-2xl border border-white/10 bg-[#171827]/95 p-4 shadow-2xl backdrop-blur-xl sm:left-0"
+              className="absolute left-0 top-8 rounded-2xl border border-white/10 bg-[#243449]/95 p-3 shadow-2xl backdrop-blur-xl sm:left-2 sm:top-12 sm:p-4"
             >
               <Code2 className="mb-2 text-violet-400" size={22} />
               <p className="text-xs text-gray-400">Speciality</p>
@@ -489,7 +489,7 @@ export default function App() {
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 4.5, repeat: Infinity }}
-              className="absolute -bottom-1 -right-1 rounded-2xl border border-white/10 bg-[#171827]/95 p-4 shadow-2xl backdrop-blur-xl sm:right-0"
+              className="absolute bottom-0 right-0 rounded-2xl border border-white/10 bg-[#243449]/95 p-3 shadow-2xl backdrop-blur-xl sm:right-2 sm:p-4"
             >
               <Sparkles className="mb-2 text-cyan-400" size={22} />
               <p className="text-xs text-gray-400">Mindset</p>
@@ -563,7 +563,7 @@ export default function App() {
         {/* SKILLS */}
         <section
           id="skills"
-          className="mx-auto max-w-7xl px-5 pt-8 pb-28 md:px-8"
+          className="mx-auto w-full max-w-7xl min-w-0 px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-28"
         >
           <Heading
             eyebrow="02 / My Toolkit"
@@ -572,7 +572,7 @@ export default function App() {
             description="My frontend toolkit combines core web technologies, modern UI frameworks and practical development tools. These are the technologies I've been learning and using while building projects."
           />
 
-          <div className="grid gap-5 md:grid-cols-2">
+          <div className="grid min-w-0 grid-cols-1 gap-5 md:grid-cols-2">
             {skillGroups.map((group, index) => {
               const Icon = group.icon;
               return (
@@ -635,7 +635,7 @@ export default function App() {
               description="Every project is an opportunity to learn something new. Explore my work, see what I built, and check out the code behind each experience."
             />
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid w-full grid-cols-1 items-stretch gap-6 md:grid-cols-2 lg:gap-7">
               {projects.map((project, index) => (
                 <motion.article
                   key={project.no}
@@ -649,10 +649,10 @@ export default function App() {
                   }}
                   whileTap={{ scale: 0.99 }}
                   transition={{ duration: 0.65, delay: (index % 2) * 0.12 }}
-                  className="project-card group overflow-hidden rounded-[26px] border border-white/[0.09] bg-[#243449]/80 transition-all duration-500 hover:border-sky-400/50 hover:shadow-[0_20px_60px_rgba(56,189,248,0.12)]"
+                  className="project-card group flex h-full min-w-0 flex-col overflow-hidden rounded-[26px] border border-white/[0.09] bg-[#243449] transition-all duration-500 hover:-translate-y-2 hover:border-sky-400/40 hover:shadow-2xl hover:shadow-sky-950/20"
                 >
                   {/* Visual project preview */}
-                  <div className="project-preview relative h-64 overflow-hidden bg-[#10111c] sm:h-72">
+                  <div className="project-preview relative h-52 w-full overflow-hidden bg-[#10111c] sm:h-64 lg:h-72">
                     {project.screenshot ? (
                       <img
                         src={project.screenshot}
@@ -700,7 +700,7 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="p-7 sm:p-8">
+                  <div className="flex flex-1 flex-col p-5 sm:p-7 lg:p-8">
                     <div className="flex items-start justify-between gap-4">
                       <div>
                         <h3 className="text-2xl font-black tracking-tight transition group-hover:text-violet-300">
@@ -719,19 +719,19 @@ export default function App() {
                       {project.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-[11px] font-semibold text-gray-300"
+                          className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold text-gray-300 transition hover:border-violet-400/50 hover:bg-violet-500/10 hover:text-violet-200 hover:-translate-y-1 hover:border-sky-400/50 hover:bg-sky-400/10 hover:text-sky-300 active:scale-95"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
 
-                    <div className="mt-7 flex gap-3 border-t border-white/10 pt-6">
+                    <div className="mt-auto grid w-full grid-cols-1 gap-3 border-t border-white/10 pt-6 min-[400px]:grid-cols-2">
                       <a
                         href={project.demo}
                         target="_blank"
                         rel="noreferrer"
-                        className="group flex items-center gap-3 rounded-xl bg-violet-600 px-7 py-4 text-sm font-bold shadow-lg shadow-violet-600/20 transition-all duration-300 hover:-translate-y-1 hover:bg-violet-500 hover:shadow-xl hover:shadow-violet-500/30 active:scale-95"
+                        className="flex w-full min-w-0 items-center justify-center gap-2 rounded-xl bg-violet-600 px-4 py-3.5 text-xs font-bold text-white transition-all duration-300 hover:bg-violet-500 active:scale-95 sm:text-sm"
                       >
                         Live Demo <ExternalLink size={15} />
                       </a>
@@ -739,7 +739,7 @@ export default function App() {
                         href={project.github}
                         target="_blank"
                         rel="noreferrer"
-                        className="group flex items-center gap-3 rounded-xl bg-violet-600 px-7 py-4 text-sm font-bold shadow-lg shadow-violet-600/20 transition-all duration-300 hover:-translate-y-1 hover:bg-violet-500 hover:shadow-xl hover:shadow-violet-500/30 active:scale-95"
+                        className="flex w-full min-w-0 items-center justify-center gap-2 rounded-xl border border-white/10 px-4 py-3.5 text-xs font-bold text-white transition-all duration-300 hover:border-sky-400/50 hover:bg-sky-400/10 active:scale-95 sm:text-sm"
                       >
                         <FaGithub size={15} /> Source Code
                       </a>
@@ -752,78 +752,110 @@ export default function App() {
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="mx-auto max-w-7xl px-5 py-14 md:px-8">
+        <section
+          id="contact"
+          className="relative mx-auto w-full max-w-7xl overflow-hidden px-5 py-20 sm:px-8 md:py-28"
+        >
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative overflow-hidden rounded-[32px] border border-violet-400/20 bg-gradient-to-br from-[#243449] via-[#1e293b] to-[#172235] p-8 sm:p-14 md:p-20"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7 }}
+            className="relative grid min-w-0 grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-14"
           >
-            <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-violet-600/20 blur-[100px]" />
-            <div className="relative grid gap-12 md:grid-cols-2 md:items-end">
-              <div>
-                <p className="mb-6 text-xs font-bold tracking-[0.3em] text-violet-400">
-                  04 / GET IN TOUCH
-                </p>
-                <h2 className="text-5xl font-black leading-tight sm:text-6xl md:text-7xl">
-                  Let's make
-                  <br />
-                  something <span className="gradient-text">great.</span>
-                </h2>
-                <p className="mt-7 max-w-md leading-8 text-gray-400">
-                  Have an idea, a project or an opportunity to discuss? I'd be
-                  happy to connect, share ideas and learn something new
-                  together.
-                </p>
+            {/* Background glow */}
+            <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-violet-600/15 blur-[100px]" />
 
-                <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=hasnain.tanoli5656@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-8 inline-flex w-fit items-center gap-3 rounded-xl bg-violet-600 px-7 py-4 text-sm font-bold text-white shadow-lg shadow-violet-600/20 transition-all duration-300 hover:-translate-y-1 hover:bg-violet-500 hover:shadow-xl hover:shadow-violet-500/30 active:scale-95"
-                >
-                  Say Hello
-                  <ArrowUpRight size={18} />
-                </a>
-              </div>
+            {/* Left Content */}
+            <div className="relative min-w-0">
+              <p className="mb-5 text-xs font-bold tracking-[0.3em] text-sky-400">
+                04 / GET IN TOUCH
+              </p>
 
-              <div className="space-y-3">
-                <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=hasnain.tanoli5656@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.04] p-5 transition hover:border-sky-400/40"
-                >
-                  <span className="flex items-center gap-3 text-sm font-semibold">
-                    <FaEnvelope className="text-violet-400" size={19} />
-                    Email
+              <h2 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+                Let's make
+                <br />
+                something <span className="gradient-text">great.</span>
+              </h2>
+
+              <p className="mt-6 max-w-lg text-sm leading-7 text-slate-300 sm:text-base sm:leading-8">
+                Have an idea, a project or an opportunity to discuss? I'd be
+                happy to connect, share ideas and explore how we can create
+                something meaningful together.
+              </p>
+
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hasnain.tanoli5656@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-3 rounded-xl bg-sky-600 px-6 py-4 text-sm font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-sky-500 hover:shadow-lg hover:shadow-sky-500/20 active:scale-95"
+              >
+                Say Hello
+                <ArrowUpRight size={18} />
+              </a>
+            </div>
+
+            {/* Right Contact Links */}
+            <div className="relative flex min-w-0 flex-col gap-4">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hasnain.tanoli5656@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-w-0 items-center justify-between gap-3 rounded-2xl border border-white/10 bg-[#243449]/70 p-5 transition duration-300 hover:-translate-y-1 hover:border-sky-400/50 hover:bg-[#243449]"
+              >
+                <span className="flex min-w-0 items-center gap-3">
+                  <FaEnvelope className="shrink-0 text-sky-400" size={21} />
+                  <span className="min-w-0">
+                    <span className="block text-sm font-bold text-white">
+                      Email
+                    </span>
+                    <span className="block break-all text-xs text-slate-400 sm:text-sm">
+                      hasnain.tanoli5656@gmail.com
+                    </span>
                   </span>
-                  <ArrowUpRight className="text-gray-500" />
-                </a>
-                <a
-                  href="https://github.com/hasnaintanoli5656-bit"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.04] p-5 transition hover:border-sky-400/40"
-                >
-                  <span className="flex items-center gap-3 text-sm font-semibold">
-                    <FaGithub className="text-violet-400" size={19} /> GitHub
+                </span>
+                <ArrowUpRight className="shrink-0 text-slate-400" />
+              </a>
+
+              <a
+                href="https://github.com/hasnaintanoli5656-bit"
+                target="_blank"
+                rel="noreferrer"
+                className="flex min-w-0 items-center justify-between gap-3 rounded-2xl border border-white/10 bg-[#243449]/70 p-5 transition duration-300 hover:-translate-y-1 hover:border-sky-400/50 hover:bg-[#243449]"
+              >
+                <span className="flex items-center gap-3">
+                  <FaGithub className="shrink-0 text-sky-400" size={21} />
+                  <span>
+                    <span className="block text-sm font-bold text-white">
+                      GitHub
+                    </span>
+                    <span className="block text-xs text-slate-400 sm:text-sm">
+                      Explore my projects
+                    </span>
                   </span>
-                  <ArrowUpRight className="text-gray-500" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/hasnain-tanoli-92a057414/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.04] p-5 transition hover:border-sky-400/40"
-                >
-                  <span className="flex items-center gap-3 text-sm font-semibold">
-                    <FaLinkedin className="text-violet-400" size={19} />{" "}
-                    LinkedIn
+                </span>
+                <ArrowUpRight className="shrink-0 text-slate-400" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/hasnain-tanoli-92a057414/"
+                target="_blank"
+                rel="noreferrer"
+                className="flex min-w-0 items-center justify-between gap-3 rounded-2xl border border-white/10 bg-[#243449]/70 p-5 transition duration-300 hover:-translate-y-1 hover:border-sky-400/50 hover:bg-[#243449]"
+              >
+                <span className="flex items-center gap-3">
+                  <FaLinkedin className="shrink-0 text-sky-400" size={21} />
+                  <span>
+                    <span className="block text-sm font-bold text-white">
+                      LinkedIn
+                    </span>
+                    <span className="block text-xs text-slate-400 sm:text-sm">
+                      Let's connect professionally
+                    </span>
                   </span>
-                  <ArrowUpRight className="text-gray-500" />
-                </a>
-              </div>
+                </span>
+                <ArrowUpRight className="shrink-0 text-slate-400" />
+              </a>
             </div>
           </motion.div>
         </section>

@@ -10,14 +10,14 @@
   --text-muted: #cbd5e1;
 }
 
-::selection {
-  background: #38bdf8;
-  color: #0f172a;
+* {
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
+  width: 100%;
 }
 
 section[id] {
@@ -26,51 +26,82 @@ section[id] {
 
 body {
   margin: 0;
+  width: 100%;
+  min-width: 320px;
   background: var(--bg-main);
   color: var(--text-main);
   font-family: 'DM Sans', sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
-* {
-  box-sizing: border-box;
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--accent);
+  color: #0f172a;
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+}
+
 .gradient-text {
-  background: linear-gradient(90deg, #38bdf8, #818cf8, #67e8f9);
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #818cf8,
+    #67e8f9
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
 
 .project-card {
   min-width: 0;
   overflow: hidden;
 }
 
-a,
-button {
-  -webkit-tap-highlight-color: transparent;
-}
-
-button,
-a {
-  outline-offset: 4px;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid #38bdf8;
-}
-
 .project-card h3,
 .project-card p {
   overflow-wrap: anywhere;
 }
+
+.project-preview {
+  min-width: 0;
+  overflow: hidden;
+}
+
+
+
+@media (max-width: 1024px) {
+  #home,
+  #about,
+  #skills,
+  #projects,
+  #contact {
+    min-width: 0;
+  }
+}
+
 
 @media (max-width: 768px) {
   .project-preview {
@@ -86,3 +117,53 @@ button:focus-visible {
   }
 }
 
+@media (max-width: 480px) {
+  #home {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  #home h1 {
+    font-size: clamp(2.3rem, 10vw, 3.2rem);
+    line-height: 1.12;
+    overflow-wrap: break-word;
+  }
+
+  #home .flex-wrap {
+    gap: 0.75rem;
+  }
+
+  #home .flex-wrap > a {
+    max-width: 100%;
+  }
+
+  #skills,
+  #contact {
+    min-width: 0;
+  }
+
+  #skills h2,
+  #contact h2 {
+    font-size: clamp(2rem, 8.5vw, 2.7rem);
+    line-height: 1.15;
+    overflow-wrap: break-word;
+  }
+
+  #skills .grid > *,
+  #contact .grid > * {
+    min-width: 0;
+  }
+
+  #projects article {
+    min-width: 0;
+  }
+
+  #projects article > div:last-child {
+    padding: 1.1rem;
+  }
+
+  #contact {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
