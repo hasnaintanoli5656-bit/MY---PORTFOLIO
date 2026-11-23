@@ -174,10 +174,19 @@ const skillGroups = [
     skills: ["Tailwind CSS", "Bootstrap", "Material UI", "Responsive Design"],
   },
   {
-    title: "State & Backend Tools",
+    title: "Backend & Data",
     icon: Database,
-    description: "Working with application data, authentication and APIs.",
-    skills: ["Redux Toolkit", "Firebase", "REST APIs"],
+    description:
+      "Building server-side functionality, connecting databases and working with APIs.",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "REST APIs",
+      "Firebase",
+      "Redux Toolkit",
+    ],
   },
   {
     title: "Development Tools",
@@ -357,7 +366,7 @@ export default function App() {
             >
               <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
               <span className="text-xs font-semibold tracking-wider text-emerald-300">
-                OPEN TO FRONTEND OPPORTUNITIES
+                OPEN TO MERN STACK OPPORTUNITIES
               </span>
             </motion.div>
 
@@ -384,16 +393,16 @@ export default function App() {
               className="mt-7 max-w-xl space-y-4 text-base leading-7 text-slate-300 sm:text-lg sm:leading-8"
             >
               <p>
-                I'm a Frontend Developer who builds responsive, modern and
-                user-friendly web applications using React, Next.js and
-                TypeScript. I focus on clean code, thoughtful design and smooth
-                user experiences.
+                I'm a MERN Stack Developer building responsive, modern web
+                applications with MongoDB, Express.js, React.js and Node.js. I
+                also work with Next.js, TypeScript and modern UI tools, focusing
+                on clean code and practical user experiences.
               </p>
 
               <p>
-                I'm actively seeking Frontend Developer roles, internships and
-                freelance opportunities where I can contribute my skills, work
-                on real-world projects and grow with a development team.
+                I'm open to MERN Stack and Full Stack internship opportunities
+                where I can contribute to real projects, strengthen my backend
+                skills and grow with a collaborative development team.
               </p>
             </motion.div>
 
@@ -483,7 +492,7 @@ export default function App() {
             >
               <Code2 className="mb-2 text-violet-400" size={22} />
               <p className="text-xs text-gray-400">Speciality</p>
-              <p className="text-sm font-bold">Frontend Dev</p>
+              <p className="text-sm font-bold">MERN Stack Dev</p>
             </motion.div>
 
             <motion.div
@@ -528,18 +537,18 @@ export default function App() {
             >
               <div className="space-y-5 text-base leading-8 text-slate-300 sm:text-lg">
                 <p>
-                  I'm a Frontend Developer passionate about building modern,
+                  I'm a MERN Stack Developer passionate about building modern,
                   responsive and user-focused web applications. I work with
-                  HTML, CSS, JavaScript, React.js, Next.js and TypeScript to
-                  turn ideas into functional digital experiences.
+                  MongoDB, Express.js, React.js and Node.js, alongside
+                  JavaScript, TypeScript and modern frontend tools.
                 </p>
 
                 <p>
-                  I'm continuously improving my skills through practical
-                  development and my Web Development studies at Saylani Mass IT
-                  Training (SMIT). I'm also looking for professional
-                  opportunities where I can contribute to real projects,
-                  collaborate with a team and deliver meaningful results.
+                  I'm continuously improving my skills through hands-on projects
+                  and my Web Development studies at Saylani Mass IT Training
+                  (SMIT). I'm focused on strengthening backend development,
+                  database design and API integration while building practical
+                  full-stack applications.
                 </p>
               </div>
               <div className="mt-9 grid grid-cols-2 gap-4">
@@ -552,8 +561,10 @@ export default function App() {
                 <div className="rounded-2xl border border-white/10 bg-[#11121d] p-5">
                   <Layers3 className="mb-4 text-cyan-400" size={25} />
                   <p className="text-xs text-gray-500">My focus</p>
-                  <h3 className="mt-2 font-bold">Frontend</h3>
-                  <p className="mt-1 text-sm text-gray-400">Modern Web Apps</p>
+                  <h3 className="mt-2 font-bold">MERN Stack</h3>
+                  <p className="mt-1 text-sm text-gray-400">
+                    Full Stack Web Apps
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -569,7 +580,7 @@ export default function App() {
             eyebrow="02 / My Toolkit"
             title="Skills that bring"
             highlight="ideas to life."
-            description="My frontend toolkit combines core web technologies, modern UI frameworks and practical development tools. These are the technologies I've been learning and using while building projects."
+            description="My toolkit covers modern frontend development, backend fundamentals, databases and the tools I use to build full-stack web applications."
           />
 
           <div className="grid min-w-0 grid-cols-1 gap-5 md:grid-cols-2">
@@ -874,8 +885,8 @@ export default function App() {
                 </a>
 
                 <p className="mt-5 max-w-sm text-sm leading-7 text-slate-300">
-                  I'm a Frontend Developer passionate about building modern,
-                  responsive and user-friendly web experiences. Let's create
+                  I'm a MERN Stack Developer passionate about building modern,
+                  responsive and user-friendly web applications. Let's create
                   something meaningful together.
                 </p>
 
